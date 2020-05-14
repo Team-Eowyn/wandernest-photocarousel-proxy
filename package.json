@@ -1,0 +1,24 @@
+{
+  "name": "wandernest-photocarousel-proxy",
+  "version": "1.0.0",
+  "description": "wandernest-photocarousel-proxy",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Team-Eowyn/wandernest-photocarousel-proxy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Team-Eowyn/wandernest-photocarousel-proxy/issues"
+  },
+  "homepage": "https://github.com/Team-Eowyn/wandernest-photocarousel-proxy#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^1.0.3"
+  }
+}

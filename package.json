@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "startAll":"(cd wandernest-about && npm run start) & (cd wandernest-bookings && npm run start) & (cd wandernest-photocarousel && npm run start:dev) & (cd wandernest-reviews && npm run server-dev) & npm run start"
   },
   "repository": {
     "type": "git",

@@ -6,7 +6,7 @@ const app = express();
 const port = 3000;
 
 app.use(express.static(path.join(__dirname, './public')));
-app.use('/:id', express.static(path.join(__dirname, './public')))
+// app.use('/:id', express.static(path.join(__dirname, './public')))
 
 app.use('/about/:id', createProxyMiddleware({target: 'http://localhost:3003', changeOrigin: true}));
 

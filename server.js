@@ -7,14 +7,15 @@ const port = 3000;
 
 const ReviewService = "http://ec2-54-153-71-183.us-west-1.compute.amazonaws.com:3004";
 const PhotoService = "http://ec2-18-220-158-65.us-east-2.compute.amazonaws.com:3001";
+const BookingService = "http://ec2-18-191-247-25.us-east-2.compute.amazonaws.com:3002";
 
 app.use(express.static(path.join(__dirname, './public')));
 
 app.use('/about/:id', createProxyMiddleware({target: 'http://localhost:3003', changeOrigin: true}));
 
-app.use('/api/bookings/:id', createProxyMiddleware({target: 'http://localhost:3002', changeOrigin: true}));
+app.use('/api/bookings/:id', createProxyMiddleware({target: BookingService, changeOrigin: true}));
 
-app.use('/api/bookings', createProxyMiddleware({target: 'http://localhost:3002', changeOrigin: true}));
+app.use('/api/bookings', createProxyMiddleware({target: BookingService, changeOrigin: true}));
 
 app.use('/api/hotels', createProxyMiddleware({target: PhotoService, changeOrigin: true}));
 

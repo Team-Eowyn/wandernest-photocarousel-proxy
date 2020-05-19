@@ -9,10 +9,13 @@ const ReviewService = "http://ec2-54-153-71-183.us-west-1.compute.amazonaws.com:
 const PhotoService = "http://ec2-18-220-158-65.us-east-2.compute.amazonaws.com:3001";
 const BookingService = "http://ec2-18-191-247-25.us-east-2.compute.amazonaws.com:3002";
 const AboutService = "http://ec2-3-135-240-238.us-east-2.compute.amazonaws.com:3003";
+const HeaderService = "http://ec2-3-135-240-27.us-east-2.compute.amazonaws.com:3005";
 
 app.use(express.static(path.join(__dirname, './public')));
 
 app.use('/about/:id', createProxyMiddleware({target: AboutService, changeOrigin: true}));
+
+app.use('/header/:id', createProxyMiddleware({target: HeaderService, changeOrigin: true}));
 
 app.use('/api/bookings/:id', createProxyMiddleware({target: BookingService, changeOrigin: true}));
 

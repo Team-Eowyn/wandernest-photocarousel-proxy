@@ -3,9 +3,6 @@
   flex-wrap: wrap;
 }
 
-#Header{
-  width: 100%;
-}
 
 #Bookings{
   flex: 0 0 25%;
